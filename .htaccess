@@ -1,0 +1,14 @@
+RewriteEngine on
+
+RewriteRule ^auth/login$ login.php
+RewriteRule ^auth/verify$ auth.php
+RewriteRule ^logout$ logout.php
+
+RewriteRule ^loan$ loan-index.php
+RewriteRule ^loan/([^/]*)/detail$ loan-detail.php?id=$1 [L]
+RewriteRule ^loan/([^/]*)/add$ loan-process.php?id=$1 [L]
+
+RewriteRule ^borrow$ borrow-index.php
+
+RewriteRule ^invoice$ invoice-index.php
+RewriteRule ^invoice/([^/]*)/pay$ invoice-pay.php?id=$1 [L]
